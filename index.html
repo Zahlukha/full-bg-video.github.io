@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Background Video</title>
+  <meta name="description" content="Full screen background video">
+  <meta name="author" description="Artem">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+
+  <!-- Main menu -->
+  <div class="menu">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Услуги</a></li>
+      <li><a href="#">Цены</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </div><!-- end main menu -->
+
+  <div class="content">
+    <h1 class="content_heading">Веб-разработка</h1>
+  </div><!-- /content -->
+
+  <div class="sub-menu">
+    <ul>
+      <li><a href="#modal1" class="open_modal">Качество</a></li>
+      <li><a href="#modal2" class="open_modal">Скорость</a></li>
+      <li><a href="#modal3" class="open_modal">Надежность</a></li>
+    </ul>
+  </div>
+
+  <!-- footer -->
+
+    <footer>
+      <p>Developed by <a href="https://github.com/Zahlukha" target="_blank" rel="noopener">Zahlukha Artem</a><br /></p>
+      <p>2017</p>
+    </footer>
+  <!-- end footer -->
+
+  <!-- modal window -->
+
+  <!-- window 1 -->
+  <div id="modal1" class="modal_div"><!-- Сaмo oкнo --> 
+    <span class="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+    <form action="" method="post">
+      <h3 id="caption">Качественный подход</h3>
+      <p>Только качественная разработка программного продукта.</p>
+        <img src="image/icon-quality.png" />
+    </form>
+  </div>
+  <!-- end window 1 -->
+
+    <!-- window 2 -->
+  <div id="modal2" class="modal_div"><!-- Сaмo oкнo --> 
+    <span class="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+    <form action="" method="post">
+      <h3 id="caption">Быстрая загрузка сайта</h3>
+      <p>Грамотно оптимизированный код - залог стабильной и быстрой работы.</p>
+        <img src="image/icon-speed.png" />
+    </form>
+  </div>
+  <!-- end window 2 -->
+
+    <!-- window 3 -->
+  <div id="modal3" class="modal_div"><!-- Сaмo oкнo --> 
+    <span class="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+    <form action="" method="post">
+      <h3 id="caption">Надежная работа</h3>
+      <p>Простота - залог надежности, чем проще компоненты, тем надежнее сама система.</p>
+        <img src="image/icon-safety.png" />
+    </form>
+  </div>
+  <!-- end window 3 -->
+
+  <!-- Background video -->
+
+  <video id="bg-video" class="video" muted loop>
+    <source src="video/sky.mp4" type="video/mp4">
+      <source src="video/sky.ogv" type="video/ogg">
+        <source src="video/sky.webm" type="video/webm">
+        </video><!-- /video -->
+
+        <script src="js/modal-window.js"></script>
+        <script>
+          (function() {
+
+            var video = document.getElementById("bg-video");
+
+            video.addEventListener( "canplay", function() {
+
+              video.play();
+            });
+          })();
+        </script>
+
+        <div id="overlay"></div><!-- Пoдлoжкa -->
+
+      </body>
+      </html>
